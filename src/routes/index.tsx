@@ -6,6 +6,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { Reveal } from "@/hooks/useReveal";
 import { Marquee } from "@/components/site/Marquee";
 import { featuredProducts } from "@/lib/products";
+import  hero  from "../assets/hero.jpeg";
 
 import heroImg from "@/assets/nush-clinic-9.jpeg.asset.json";
 import serumStill from "@/assets/nush-clinic-10.jpeg.asset.json";
@@ -121,7 +122,7 @@ function Home() {
               }}
             >
               <img
-                src={heroImg.url}
+                src={hero}
                 alt="Clinical skin precision"
                 className="h-full w-full object-cover"
               />
