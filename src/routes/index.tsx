@@ -8,16 +8,15 @@ import { Marquee } from "@/components/site/Marquee";
 import { featuredProducts } from "@/lib/products";
 import  hero  from "../assets/hero.jpeg";
 
-import heroImg from "@/assets/nush-clinic-9.jpeg.asset.json";
-import serumStill from "@/assets/nush-clinic-10.jpeg.asset.json";
-import labImg from "@/assets/nush-clinic-8.jpeg.asset.json";
-import ritualImg from "@/assets/nush-clinic-2.jpeg.asset.json";
-import clinic1 from "@/assets/nush-clinic-1.jpeg.asset.json";
-import clinic3 from "@/assets/nush-clinic-3.jpeg.asset.json";
-import clinic4 from "@/assets/nush-clinic-4.jpeg.asset.json";
-import clinic5 from "@/assets/nush-clinic-5.jpeg.asset.json";
-import clinic6 from "@/assets/nush-clinic-6.jpeg.asset.json";
-import clinic7 from "@/assets/nush-clinic-7.jpeg.asset.json";
+import serumStill from "@/assets/nush-clinic-10.jpeg";
+import labImg from "@/assets/nush-clinic-8.jpeg";
+import ritualImg from "@/assets/nush-clinic-2.jpeg";
+import clinic1 from "@/assets/nush-clinic-1.jpeg";
+import clinic3 from "@/assets/nush-clinic-3.jpeg";
+import clinic4 from "@/assets/nush-clinic-4.jpeg";
+import clinic5 from "@/assets/nush-clinic-5.jpeg";
+import clinic6 from "@/assets/nush-clinic-6.jpeg";
+import clinic7 from "@//assets/nush-clinic-7.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -25,7 +24,7 @@ export const Route = createFileRoute("/")({
 
 const PRESS = ["VOGUE", "HARPER'S BAZAAR", "ELLE", "GRAZIA", "VANITY FAIR", "WWD"];
 
-const INSTA = [clinic1.url, clinic5.url, clinic7.url, clinic6.url, clinic4.url, clinic3.url];
+const INSTA = [clinic1, clinic5, clinic7, clinic6, clinic4, clinic3];
 
 function useParallax() {
   const ref = useRef<HTMLDivElement>(null);
@@ -242,7 +241,7 @@ function Home() {
       {/* FULL-BLEED EDITORIAL — parallax */}
       <section className="relative h-[80vh] md:h-screen overflow-hidden">
         <div ref={parallaxRef} className="absolute inset-0 will-change-transform">
-          <img src={labImg.url} alt="Nush atelier" className="h-full w-full object-cover" />
+          <img src={labImg} alt="Nush atelier" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent" />
         <div className="absolute inset-0 flex items-end">
@@ -293,7 +292,7 @@ function Home() {
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden bg-champagne/30 group">
               <img
-                src={serumStill.url}
+                src={serumStill}
                 alt="Nush serum bottle"
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
@@ -333,7 +332,7 @@ function Home() {
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
           <Reveal className="relative aspect-[4/5] overflow-hidden bg-champagne/30 group">
             <img
-              src={ritualImg.url}
+              src={ritualImg}
               alt="Skincare ritual"
               loading="lazy"
               className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
