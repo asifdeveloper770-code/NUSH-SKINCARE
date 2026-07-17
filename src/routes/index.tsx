@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import hero from "@/assets/nush-clinic-9.jpeg.asset.json";
-import tile1 from "@/assets/nush-clinic-1.jpeg.asset.json";
-import tile2 from "@/assets/nush-clinic-3.jpeg.asset.json";
-import tile3 from "@/assets/nush-clinic-4.jpeg.asset.json";
-import benefits from "@/assets/nush-clinic-6.jpeg.asset.json";
+import hero from "@/assets/nush-clinic-9.jpeg";
+import tile1 from "@/assets/nush-clinic-1.jpeg";
+import tile2 from "@/assets/nush-clinic-3.jpeg";
+import tile3 from "@/assets/nush-clinic-4.jpeg";
+import benefits from "@/assets/nush-clinic-6.jpeg";
 import laser from "@/assets/nush-clinic-2.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -19,17 +19,17 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Nush Skincare — New York & Dubai" },
       { property: "og:description", content: "Advanced aesthetic treatments, tailored to your skin." },
-      { property: "og:image", content: hero.url },
-      { name: "twitter:image", content: hero.url },
+      { property: "og:image", content: hero },
+      { name: "twitter:image", content: hero },
     ],
   }),
   component: Home,
 });
 
 const SERVICES_TILES = [
-  { title: "INJECTABLES", img: tile1.url, to: "/services" },
-  { title: "DERMAPLANING", img: tile2.url, to: "/services" },
-  { title: "DEEP CLEANSE WITH LED", img: tile3.url, to: "/services" },
+  { title: "INJECTABLES", img: tile1, to: "/services" },
+  { title: "DERMAPLANING", img: tile2, to: "/services" },
+  { title: "DEEP CLEANSE WITH LED", img: tile3, to: "/services" },
 ];
 
 function Home() {
@@ -39,7 +39,7 @@ function Home() {
       <section className="relative">
         <div className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
           <img
-            src={hero.url}
+            src={hero}
             alt="Nush Skincare — advanced aesthetic treatments"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
@@ -113,7 +113,7 @@ function Home() {
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-20 md:pb-28">
         <div className="grid md:grid-cols-2">
           <div className="relative aspect-[4/5] md:aspect-auto overflow-hidden bg-alabaster">
-            <img src={benefits.url} alt="Nush benefits" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={benefits} alt="Nush benefits" className="absolute inset-0 h-full w-full object-cover" />
           </div>
           <div className="bg-charcoal text-ivory p-10 md:p-16 flex flex-col justify-center">
             <h2 className="font-serif text-4xl md:text-5xl leading-tight">
@@ -156,7 +156,7 @@ function Home() {
             </Link>
           </div>
           <div className="relative aspect-[4/5] md:aspect-auto overflow-hidden order-1 md:order-2">
-            <img src={laser.url} alt="Laser hair removal" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={laser} alt="Laser hair removal" className="absolute inset-0 h-full w-full object-cover" />
           </div>
         </div>
       </section>
